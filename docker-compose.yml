@@ -1,0 +1,27 @@
+version: '3'
+services: 
+  db:
+    image: postgres:alpine
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: password
+  front:
+    restart: always
+    build:
+      context: ./front
+      dockerfile: Dockerfile.front.dev
+    ports:
+      - "3000:80"
+    volumes: 
+    - /app/node_modules
+    - ./front:/app
+  server:
+    restart: always
+    build:
+      context: ./server
+      dockerfile: Dockerfile.server.dev
+    ports:
+      - "4000:4000"
+    volumes: 
+    - /app/node_modules
+    - ./server:/app
