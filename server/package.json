@@ -7,7 +7,8 @@
     "watch": "tsc --watch",
     "build": "tsc",
     "dev": "nodemon dist/bin/www",
-    "start": "node dist/bin/www"
+    "start": "node dist/bin/www",
+    "db-connect": "psql -h localhost -p 5432 -U postgres"
   },
   "keywords": [],
   "author": "",
