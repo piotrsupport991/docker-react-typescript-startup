@@ -1,12 +1,15 @@
 version: '3'
 services: 
   db:
-    image: postgres:alpine
     restart: always
-    ports: 
+    ports:
       - "5432:5432"
-    environment: 
+    environment:
       POSTGRES_PASSWORD: password
+    build:   
+      context: .
+      dockerfile: Dockerfile.db.dev
+  
   front:
     restart: always
     build:
@@ -18,6 +21,7 @@ services:
     - /app/node_modules
     - ./front:/app
     - ./front/build:/usr/share/nginx/html
+  
   server:
     restart: always
     build:

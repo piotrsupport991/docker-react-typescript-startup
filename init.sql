@@ -1,0 +1,114 @@
+
+CREATE DATABASE practice;
+
+\c practice;
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE users (
+	user_id uuid PRIMARY KEY default uuid_generate_v4(),
+	firstname VARCHAR NOT NULL,
+	lastname VARCHAR NOT NULL,
+	is_admin BOOLEAN
+);
+
+insert into users (firstname, lastname, is_admin) values ('Suzanna', 'Willgoose', false);
+insert into users (firstname, lastname, is_admin) values ('Anny', 'Barkus', false);
+insert into users (firstname, lastname, is_admin) values ('Winona', 'Salazar', true);
+insert into users (firstname, lastname, is_admin) values ('Hamish', 'Peirpoint', false);
+insert into users (firstname, lastname, is_admin) values ('Oates', 'Pritty', true);
+insert into users (firstname, lastname, is_admin) values ('Faina', 'Fiddian', false);
+insert into users (firstname, lastname, is_admin) values ('Griz', 'Skillen', false);
+insert into users (firstname, lastname, is_admin) values ('Chadwick', 'Descroix', false);
+insert into users (firstname, lastname, is_admin) values ('Alric', 'Rizzello', false);
+insert into users (firstname, lastname, is_admin) values ('Eunice', 'Gawthrop', true);
+insert into users (firstname, lastname, is_admin) values ('Esra', 'Ferson', false);
+insert into users (firstname, lastname, is_admin) values ('Zorine', 'McDonagh', false);
+insert into users (firstname, lastname, is_admin) values ('Valentine', 'Klejna', false);
+insert into users (firstname, lastname, is_admin) values ('El', 'Kitchen', true);
+insert into users (firstname, lastname, is_admin) values ('Larry', 'Stryde', false);
+insert into users (firstname, lastname, is_admin) values ('Ingrim', 'Luckings', false);
+insert into users (firstname, lastname, is_admin) values ('Bryon', 'Cornil', false);
+insert into users (firstname, lastname, is_admin) values ('Melessa', 'Rugieri', false);
+insert into users (firstname, lastname, is_admin) values ('Quintin', 'Mallebone', true);
+insert into users (firstname, lastname, is_admin) values ('Sherilyn', 'Weigh', true);
+insert into users (firstname, lastname, is_admin) values ('Chuck', 'Sacase', true);
+insert into users (firstname, lastname, is_admin) values ('Georgianne', 'Phillipp', false);
+insert into users (firstname, lastname, is_admin) values ('Zebadiah', 'Robet', true);
+insert into users (firstname, lastname, is_admin) values ('Webster', 'Stealfox', true);
+insert into users (firstname, lastname, is_admin) values ('Bartolemo', 'Bover', false);
+insert into users (firstname, lastname, is_admin) values ('Neila', 'Presslee', false);
+insert into users (firstname, lastname, is_admin) values ('Leontine', 'Horrell', false);
+insert into users (firstname, lastname, is_admin) values ('Kare', 'Flute', false);
+insert into users (firstname, lastname, is_admin) values ('Jania', 'Paolo', false);
+insert into users (firstname, lastname, is_admin) values ('Daren', 'Ladbrook', true);
+insert into users (firstname, lastname, is_admin) values ('Ashli', 'Lucken', true);
+insert into users (firstname, lastname, is_admin) values ('Maybelle', 'Child', true);
+insert into users (firstname, lastname, is_admin) values ('Isidora', 'McIlreavy', false);
+insert into users (firstname, lastname, is_admin) values ('Karol', 'Felderer', true);
+insert into users (firstname, lastname, is_admin) values ('Karel', 'Hildrew', true);
+insert into users (firstname, lastname, is_admin) values ('Jephthah', 'Vittori', false);
+insert into users (firstname, lastname, is_admin) values ('Corey', 'Lubbock', false);
+insert into users (firstname, lastname, is_admin) values ('Beau', 'McKinnell', false);
+insert into users (firstname, lastname, is_admin) values ('Manda', 'Crosher', true);
+insert into users (firstname, lastname, is_admin) values ('Jaclin', 'McGrayle', true);
+insert into users (firstname, lastname, is_admin) values ('Guillaume', 'Hilliam', true);
+insert into users (firstname, lastname, is_admin) values ('Victor', 'Perl', false);
+insert into users (firstname, lastname, is_admin) values ('Romona', 'Maffi', true);
+insert into users (firstname, lastname, is_admin) values ('Barnabas', 'Bauld', true);
+insert into users (firstname, lastname, is_admin) values ('Carlos', 'Digg', false);
+insert into users (firstname, lastname, is_admin) values ('Marve', 'Bedson', true);
+insert into users (firstname, lastname, is_admin) values ('Mordecai', 'Altofts', true);
+insert into users (firstname, lastname, is_admin) values ('Georgi', 'Watman', true);
+insert into users (firstname, lastname, is_admin) values ('Janice', 'Crush', true);
+insert into users (firstname, lastname, is_admin) values ('Phip', 'Pinkney', false);
+insert into users (firstname, lastname, is_admin) values ('Bobbe', 'Ransom', true);
+insert into users (firstname, lastname, is_admin) values ('Chloette', 'Buckleigh', false);
+insert into users (firstname, lastname, is_admin) values ('Marty', 'Thomson', true);
+insert into users (firstname, lastname, is_admin) values ('Diane', 'Darbey', true);
+insert into users (firstname, lastname, is_admin) values ('Danya', 'Grassot', true);
+insert into users (firstname, lastname, is_admin) values ('Timmi', 'Glenn', false);
+insert into users (firstname, lastname, is_admin) values ('Brittaney', 'Heisler', false);
+insert into users (firstname, lastname, is_admin) values ('Elinor', 'Rackstraw', true);
+insert into users (firstname, lastname, is_admin) values ('Rich', 'Heake', false);
+insert into users (firstname, lastname, is_admin) values ('Cesare', 'Sapena', true);
+insert into users (firstname, lastname, is_admin) values ('Jaquith', 'Langfat', false);
+insert into users (firstname, lastname, is_admin) values ('Cecilio', 'Cortese', false);
+insert into users (firstname, lastname, is_admin) values ('Antonie', 'Fosberry', false);
+insert into users (firstname, lastname, is_admin) values ('Shannah', 'Pauletto', true);
+insert into users (firstname, lastname, is_admin) values ('Lindy', 'Weathers', true);
+insert into users (firstname, lastname, is_admin) values ('Gray', 'Eldrett', false);
+insert into users (firstname, lastname, is_admin) values ('Dari', 'Mintoft', true);
+insert into users (firstname, lastname, is_admin) values ('Fey', 'Sammons', true);
+insert into users (firstname, lastname, is_admin) values ('Dorie', 'Boyat', false);
+insert into users (firstname, lastname, is_admin) values ('Abraham', 'Sea', false);
+insert into users (firstname, lastname, is_admin) values ('Ellswerth', 'Keatley', true);
+insert into users (firstname, lastname, is_admin) values ('Kaleb', 'Robel', true);
+insert into users (firstname, lastname, is_admin) values ('Gunar', 'Williment', true);
+insert into users (firstname, lastname, is_admin) values ('Garrik', 'McCuis', true);
+insert into users (firstname, lastname, is_admin) values ('Faun', 'Whieldon', false);
+insert into users (firstname, lastname, is_admin) values ('Vickie', 'Kittles', true);
+insert into users (firstname, lastname, is_admin) values ('Joni', 'Mahaddy', true);
+insert into users (firstname, lastname, is_admin) values ('Finlay', 'Hollyer', false);
+insert into users (firstname, lastname, is_admin) values ('Dav', 'Leet', true);
+insert into users (firstname, lastname, is_admin) values ('Harlin', 'Adame', false);
+insert into users (firstname, lastname, is_admin) values ('Lulu', 'Tetla', false);
+insert into users (firstname, lastname, is_admin) values ('Licha', 'Pedlar', false);
+insert into users (firstname, lastname, is_admin) values ('Alejandrina', 'Nendick', true);
+insert into users (firstname, lastname, is_admin) values ('Hedvig', 'Brennon', false);
+insert into users (firstname, lastname, is_admin) values ('Gregg', 'Bourhill', true);
+insert into users (firstname, lastname, is_admin) values ('Marcella', 'O'' Concannon', true);
+insert into users (firstname, lastname, is_admin) values ('Hymie', 'Landrean', false);
+insert into users (firstname, lastname, is_admin) values ('Biddy', 'Darnbrook', true);
+insert into users (firstname, lastname, is_admin) values ('Herby', 'Tyrie', false);
+insert into users (firstname, lastname, is_admin) values ('Coop', 'Bediss', true);
+insert into users (firstname, lastname, is_admin) values ('Marco', 'Radsdale', true);
+insert into users (firstname, lastname, is_admin) values ('Farah', 'Aizlewood', true);
+insert into users (firstname, lastname, is_admin) values ('Sherri', 'Dornan', false);
+insert into users (firstname, lastname, is_admin) values ('Bennie', 'Petris', false);
+insert into users (firstname, lastname, is_admin) values ('Dewie', 'Argabrite', false);
+insert into users (firstname, lastname, is_admin) values ('Oran', 'Cutajar', false);
+insert into users (firstname, lastname, is_admin) values ('Theodoric', 'Becket', false);
+insert into users (firstname, lastname, is_admin) values ('Bernette', 'Gadsden', true);
+insert into users (firstname, lastname, is_admin) values ('Roma', 'Anfonsi', false);
+insert into users (firstname, lastname, is_admin) values ('Danni', 'Rospars', false);
