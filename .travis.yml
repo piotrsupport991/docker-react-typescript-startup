@@ -10,8 +10,7 @@ services:
     - docker run kellydouglass/react-test npm test -- --coverage
 
   after_success:
-    - docker build -t kellydouglass/multi-front ./front
-    - docker build -t kellydouglass/multi-server ./server
-    - docker build -t kellydouglass/multi-db .
+    - docker build -t kellydouglass/practice-front ./front
+    - docker build -t kellydouglass/practice-server ./server
+    - docker build -t kellydouglass/practice-db .
 
-    
